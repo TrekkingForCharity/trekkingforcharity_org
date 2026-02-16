@@ -12,7 +12,7 @@
 			"type": "process",
 			"problemMatcher": "$msCompile",
 			"options": {
-				"cwd": "${workspaceFolder}/Api"
+				"cwd": "${workspaceFolder}/src/Api"
 			}
 		},
 		{
@@ -24,14 +24,13 @@
 				"/consoleloggerparameters:NoSummary"
 			],
 			"type": "process",
-			"dependsOn": "clean (functions)",
 			"group": {
 				"kind": "build",
 				"isDefault": true
 			},
 			"problemMatcher": "$msCompile",
 			"options": {
-				"cwd": "${workspaceFolder}/Api"
+				"cwd": "${workspaceFolder}/src/Api"
 			}
 		},
 		{
@@ -47,7 +46,7 @@
 			"type": "process",
 			"problemMatcher": "$msCompile",
 			"options": {
-				"cwd": "${workspaceFolder}/Api"
+				"cwd": "${workspaceFolder}/src/Api"
 			}
 		},
 		{
@@ -64,18 +63,52 @@
 			"dependsOn": "clean release (functions)",
 			"problemMatcher": "$msCompile",
 			"options": {
-				"cwd": "${workspaceFolder}/Api"
+				"cwd": "${workspaceFolder}/src/Api"
 			}
 		},
 		{
 			"type": "func",
 			"dependsOn": "build (functions)",
 			"options": {
-				"cwd": "${workspaceFolder}/Api/bin/Debug/net8.0"
+				"cwd": "${workspaceFolder}/src/Api/bin/Debug/net8.0"
 			},
 			"command": "host start",
 			"isBackground": true,
 			"problemMatcher": "$func-dotnet-watch"
+		},
+		{
+			"label": "test: api",
+			"command": "dotnet",
+			"args": [
+				"test",
+				"tests/Api.Tests/Api.Tests.csproj"
+			],
+			"type": "process",
+			"problemMatcher": "$msCompile",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			}
+		},
+		{
+			"label": "test: client",
+			"command": "dotnet",
+			"args": [
+				"test",
+				"tests/Client.Tests/Client.Tests.csproj"
+			],
+			"type": "process",
+			"problemMatcher": "$msCompile",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			}
+		},
+		{
+			"label": "test",
+			"dependsOn": [
+				"test: api",
+				"test: client"
+			],
+			"dependsOrder": "sequence"
 		}
 	]
 }

@@ -1,0 +1,163 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrekkingForCharity.Client", "src\Client\TrekkingForCharity.Client.csproj", "{F4B1375B-C892-424D-9CB2-9FE2B5B47EDF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrekkingForCharity.Shared", "src\Shared\TrekkingForCharity.Shared.csproj", "{DA2371A3-4788-4B2A-A0F0-0FF8EBB4C948}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrekkingForCharity.Api", "src\Api\TrekkingForCharity.Api.csproj", "{CEF28A6B-A047-4153-A4E0-5A2A921B432E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "._", "._", "{7C917BDD-CA62-4B25-9F2B-357C01E53E39}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		Directory.Build.props = Directory.Build.props
+		global.json = global.json
+		README.md = README.md
+		sonar-project.properties = sonar-project.properties
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{2F4C1C5B-B0D9-4A1C-9C1A-8C9D6B00C8F8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{CEB2E8F6-8A6D-4E23-8FA0-A0D6A2F0F2D7}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\sonarqube.yml = .github\workflows\sonarqube.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".vscode", ".vscode", "{7A9E3B97-2B7D-4CEB-B2AD-A7C4E9B5F6D2}"
+	ProjectSection(SolutionItems) = preProject
+		.vscode\extensions.json = .vscode\extensions.json
+		.vscode\launch.json = .vscode\launch.json
+		.vscode\settings.json = .vscode\settings.json
+		.vscode\tasks.json = .vscode\tasks.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".idea", ".idea", "{E81E60C8-8A8D-4A2D-8B76-8E2E7D8D1DB3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".idea.TrekkingForCharity", ".idea.TrekkingForCharity", "{C2A7BA56-EC52-4ED6-8C2F-1B4A5B9E6C3B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".idea", ".idea", "{9A6D4B8F-07E8-4C8E-8F7E-2E9B6F5D1A34}"
+	ProjectSection(SolutionItems) = preProject
+		.idea\.idea.TrekkingForCharity\.idea\.gitignore = .idea\.idea.TrekkingForCharity\.idea\.gitignore
+		.idea\.idea.TrekkingForCharity\.idea\encodings.xml = .idea\.idea.TrekkingForCharity\.idea\encodings.xml
+		.idea\.idea.TrekkingForCharity\.idea\workspace.xml = .idea\.idea.TrekkingForCharity\.idea\workspace.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6C7F2B20-3CF8-4E44-9F42-6E9CDA64A8D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0AB3BF05-4346-4AA6-1389-037BE0695223}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{D370ED93-EC89-4383-8A46-5E0E7E1E4A24}"
+	ProjectSection(SolutionItems) = preProject
+		build\HOOKS.md = build\HOOKS.md
+		build\install-hooks.ps1 = build\install-hooks.ps1
+		build\install-hooks.sh = build\install-hooks.sh
+		build\install-verify-tool.ps1 = build\install-verify-tool.ps1
+		build\install-verify-tool.sh = build\install-verify-tool.sh
+		build\SonarQube.ps1 = build\SonarQube.ps1
+		build\SonarQube.sh = build\SonarQube.sh
+		build\VERIFY.md = build\VERIFY.md
+		build\hooks\pre-commit = build\hooks\pre-commit
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".sonarqube", ".sonarqube", "{EBC0D4AE-1BB2-4F52-9D6D-2A4B2E0E5C24}"
+	ProjectSection(SolutionItems) = preProject
+		.sonarqube\README.md = .sonarqube\README.md
+		.sonarqube\SonarQube.ruleset = .sonarqube\SonarQube.ruleset
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrekkingForCharity.Api.Tests", "tests\Api.Tests\TrekkingForCharity.Api.Tests.csproj", "{922C091E-C000-412A-8039-52A0EDB2781D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrekkingForCharity.Client.Tests", "tests\Client.Tests\TrekkingForCharity.Client.Tests.csproj", "{5000FBDC-94DF-4CE9-BC37-751EC0324B81}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4B1375B-C892-424D-9CB2-9FE2B5B47EDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4B1375B-C892-424D-9CB2-9FE2B5B47EDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4B1375B-C892-424D-9CB2-9FE2B5B47EDF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F4B1375B-C892-424D-9CB2-9FE2B5B47EDF}.Debug|x64.Build.0 = Debug|Any CPU
+		{F4B1375B-C892-424D-9CB2-9FE2B5B47EDF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F4B1375B-C892-424D-9CB2-9FE2B5B47EDF}.Debug|x86.Build.0 = Debug|Any CPU
+		{F4B1375B-C892-424D-9CB2-9FE2B5B47EDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4B1375B-C892-424D-9CB2-9FE2B5B47EDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4B1375B-C892-424D-9CB2-9FE2B5B47EDF}.Release|x64.ActiveCfg = Release|Any CPU
+		{F4B1375B-C892-424D-9CB2-9FE2B5B47EDF}.Release|x64.Build.0 = Release|Any CPU
+		{F4B1375B-C892-424D-9CB2-9FE2B5B47EDF}.Release|x86.ActiveCfg = Release|Any CPU
+		{F4B1375B-C892-424D-9CB2-9FE2B5B47EDF}.Release|x86.Build.0 = Release|Any CPU
+		{DA2371A3-4788-4B2A-A0F0-0FF8EBB4C948}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA2371A3-4788-4B2A-A0F0-0FF8EBB4C948}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA2371A3-4788-4B2A-A0F0-0FF8EBB4C948}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{DA2371A3-4788-4B2A-A0F0-0FF8EBB4C948}.Debug|x64.Build.0 = Debug|Any CPU
+		{DA2371A3-4788-4B2A-A0F0-0FF8EBB4C948}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DA2371A3-4788-4B2A-A0F0-0FF8EBB4C948}.Debug|x86.Build.0 = Debug|Any CPU
+		{DA2371A3-4788-4B2A-A0F0-0FF8EBB4C948}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA2371A3-4788-4B2A-A0F0-0FF8EBB4C948}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA2371A3-4788-4B2A-A0F0-0FF8EBB4C948}.Release|x64.ActiveCfg = Release|Any CPU
+		{DA2371A3-4788-4B2A-A0F0-0FF8EBB4C948}.Release|x64.Build.0 = Release|Any CPU
+		{DA2371A3-4788-4B2A-A0F0-0FF8EBB4C948}.Release|x86.ActiveCfg = Release|Any CPU
+		{DA2371A3-4788-4B2A-A0F0-0FF8EBB4C948}.Release|x86.Build.0 = Release|Any CPU
+		{CEF28A6B-A047-4153-A4E0-5A2A921B432E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEF28A6B-A047-4153-A4E0-5A2A921B432E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEF28A6B-A047-4153-A4E0-5A2A921B432E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CEF28A6B-A047-4153-A4E0-5A2A921B432E}.Debug|x64.Build.0 = Debug|Any CPU
+		{CEF28A6B-A047-4153-A4E0-5A2A921B432E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CEF28A6B-A047-4153-A4E0-5A2A921B432E}.Debug|x86.Build.0 = Debug|Any CPU
+		{CEF28A6B-A047-4153-A4E0-5A2A921B432E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEF28A6B-A047-4153-A4E0-5A2A921B432E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEF28A6B-A047-4153-A4E0-5A2A921B432E}.Release|x64.ActiveCfg = Release|Any CPU
+		{CEF28A6B-A047-4153-A4E0-5A2A921B432E}.Release|x64.Build.0 = Release|Any CPU
+		{CEF28A6B-A047-4153-A4E0-5A2A921B432E}.Release|x86.ActiveCfg = Release|Any CPU
+		{CEF28A6B-A047-4153-A4E0-5A2A921B432E}.Release|x86.Build.0 = Release|Any CPU
+		{922C091E-C000-412A-8039-52A0EDB2781D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{922C091E-C000-412A-8039-52A0EDB2781D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{922C091E-C000-412A-8039-52A0EDB2781D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{922C091E-C000-412A-8039-52A0EDB2781D}.Debug|x64.Build.0 = Debug|Any CPU
+		{922C091E-C000-412A-8039-52A0EDB2781D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{922C091E-C000-412A-8039-52A0EDB2781D}.Debug|x86.Build.0 = Debug|Any CPU
+		{922C091E-C000-412A-8039-52A0EDB2781D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{922C091E-C000-412A-8039-52A0EDB2781D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{922C091E-C000-412A-8039-52A0EDB2781D}.Release|x64.ActiveCfg = Release|Any CPU
+		{922C091E-C000-412A-8039-52A0EDB2781D}.Release|x64.Build.0 = Release|Any CPU
+		{922C091E-C000-412A-8039-52A0EDB2781D}.Release|x86.ActiveCfg = Release|Any CPU
+		{922C091E-C000-412A-8039-52A0EDB2781D}.Release|x86.Build.0 = Release|Any CPU
+		{5000FBDC-94DF-4CE9-BC37-751EC0324B81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5000FBDC-94DF-4CE9-BC37-751EC0324B81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5000FBDC-94DF-4CE9-BC37-751EC0324B81}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{5000FBDC-94DF-4CE9-BC37-751EC0324B81}.Debug|x64.Build.0 = Debug|Any CPU
+		{5000FBDC-94DF-4CE9-BC37-751EC0324B81}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5000FBDC-94DF-4CE9-BC37-751EC0324B81}.Debug|x86.Build.0 = Debug|Any CPU
+		{5000FBDC-94DF-4CE9-BC37-751EC0324B81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5000FBDC-94DF-4CE9-BC37-751EC0324B81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5000FBDC-94DF-4CE9-BC37-751EC0324B81}.Release|x64.ActiveCfg = Release|Any CPU
+		{5000FBDC-94DF-4CE9-BC37-751EC0324B81}.Release|x64.Build.0 = Release|Any CPU
+		{5000FBDC-94DF-4CE9-BC37-751EC0324B81}.Release|x86.ActiveCfg = Release|Any CPU
+		{5000FBDC-94DF-4CE9-BC37-751EC0324B81}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+			{CEB2E8F6-8A6D-4E23-8FA0-A0D6A2F0F2D7} = {2F4C1C5B-B0D9-4A1C-9C1A-8C9D6B00C8F8}
+			{C2A7BA56-EC52-4ED6-8C2F-1B4A5B9E6C3B} = {E81E60C8-8A8D-4A2D-8B76-8E2E7D8D1DB3}
+			{9A6D4B8F-07E8-4C8E-8F7E-2E9B6F5D1A34} = {C2A7BA56-EC52-4ED6-8C2F-1B4A5B9E6C3B}
+	        {F4B1375B-C892-424D-9CB2-9FE2B5B47EDF} = {6C7F2B20-3CF8-4E44-9F42-6E9CDA64A8D7}
+	        {DA2371A3-4788-4B2A-A0F0-0FF8EBB4C948} = {6C7F2B20-3CF8-4E44-9F42-6E9CDA64A8D7}
+	        {CEF28A6B-A047-4153-A4E0-5A2A921B432E} = {6C7F2B20-3CF8-4E44-9F42-6E9CDA64A8D7}
+		{922C091E-C000-412A-8039-52A0EDB2781D} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
+		{5000FBDC-94DF-4CE9-BC37-751EC0324B81} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CAEC77B5-1FF5-4E89-86CD-620314C521C4}
+	EndGlobalSection
+EndGlobal

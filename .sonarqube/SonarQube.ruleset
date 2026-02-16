@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="SonarQube Rules" Description="SonarQube rules for TrekkingForCharity" ToolsVersion="16.0">
+  <Description>This rule set contains SonarQube analyzer rules for code quality and security.</Description>
+  
+  <!-- Include all SonarAnalyzer rules -->
+  <Rules AnalyzerId="SonarAnalyzer.CSharp" RuleNamespace="SonarAnalyzer.CSharp">
+    <!-- Security Hotspots -->
+    <Rule Id="S2092" Action="Warning" /> <!-- Cookie security -->
+    <Rule Id="S2228" Action="Warning" /> <!-- Logging -->
+    <Rule Id="S3649" Action="Warning" /> <!-- SQL Injection -->
+    <Rule Id="S5693" Action="Warning" /> <!-- LDAP Injection -->
+    <Rule Id="S5733" Action="Warning" /> <!-- JSON parsing -->
+    
+    <!-- Code Smells -->
+    <Rule Id="S1125" Action="Warning" /> <!-- Boolean literals -->
+    <Rule Id="S1144" Action="Warning" /> <!-- Unused private members -->
+    <Rule Id="S1481" Action="Warning" /> <!-- Unused variables -->
+    <Rule Id="S1598" Action="Warning" /> <!-- Constructor name mismatch -->
+    <Rule Id="S1905" Action="Warning" /> <!-- Removable cast -->
+    <Rule Id="S2757" Action="Warning" /> <!-- Assignment operators -->
+    <Rule Id="S3267" Action="Warning" /> <!-- Loops should not be infinite -->
+    
+    <!-- Bug Detection -->
+    <Rule Id="S2259" Action="Warning" /> <!-- Null pointer dereference -->
+    <Rule Id="S2583" Action="Warning" /> <!-- Conditions always true/false -->
+    <Rule Id="S3923" Action="Warning" /> <!-- All if/switch branches identical -->
+    
+    <!-- Maintainability -->
+    <Rule Id="S101" Action="Warning" /> <!-- Class naming -->
+    <Rule Id="S1134" Action="Warning" /> <!-- FIXME/TODO comments -->
+    <Rule Id="S3776" Action="Warning" /> <!-- Cyclomatic complexity -->
+    <Rule Id="S107" Action="Warning" /> <!-- Method parameters count -->
+    
+    <!-- Default: Warning for all other rules -->
+    <Rule Id="S100" Action="Warning" /> <!-- Method naming -->
+    <Rule Id="S104" Action="Warning" /> <!-- File lines count -->
+  </Rules>
+</RuleSet>

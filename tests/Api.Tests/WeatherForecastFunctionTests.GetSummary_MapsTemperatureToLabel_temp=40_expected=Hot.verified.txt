@@ -1,0 +1,5 @@
+﻿{
+  Temperature: 40,
+  Result: Hot,
+  Expected: Hot
+}

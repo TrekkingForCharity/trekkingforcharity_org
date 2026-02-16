@@ -1,0 +1,5 @@
+﻿{
+  Temperature: 20,
+  Result: Mild,
+  Expected: Mild
+}

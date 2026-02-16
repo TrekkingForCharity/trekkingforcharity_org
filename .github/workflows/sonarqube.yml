@@ -1,0 +1,59 @@
+name: SonarQube Analysis
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  sonarqube:
+    name: SonarQube Code Quality Analysis
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # Full history for better analysis
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Install SonarQube Scanner
+      run: dotnet tool install --global dotnet-sonarscanner
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Begin SonarQube analysis
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+      run: |
+        dotnet sonarscanner begin \
+          /k:"trekkingforcharity" \
+          /d:sonar.host.url="$SONAR_HOST_URL" \
+          /d:sonar.login="$SONAR_TOKEN" \
+          /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml" \
+          /d:sonar.coverage.exclusions="**/bin/**,**/obj/**"
+
+    - name: Build solution
+      run: dotnet build --configuration Release --no-restore
+
+    - name: Run tests
+      run: dotnet test --configuration Release --no-build --verbosity normal --logger "console;verbosity=detailed"
+
+    - name: End SonarQube analysis
+      if: always()
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      run: dotnet sonarscanner end /d:sonar.login="$SONAR_TOKEN"
+
+    - name: Quality Gate Status
+      if: always()
+      run: |
+        echo "SonarQube analysis complete"
+        echo "Check the SonarQube dashboard for detailed results"

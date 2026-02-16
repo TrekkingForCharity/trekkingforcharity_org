@@ -343,3 +343,6 @@ healthchecksdb
 /test-results/
 /playwright-report/
 /playwright/.cache/
+# Verify snapshot testing
+*.received.*
+*.received/

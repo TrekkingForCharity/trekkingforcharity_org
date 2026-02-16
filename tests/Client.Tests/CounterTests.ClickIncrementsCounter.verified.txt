@@ -1,0 +1,4 @@
+﻿{
+  Initial: Current count: 0,
+  AfterClick: Current count: 1
+}

@@ -1,0 +1,5 @@
+﻿{
+  Temperature: 10,
+  Result: Cold,
+  Expected: Cold
+}

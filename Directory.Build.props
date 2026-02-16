@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <!-- Common NuGet versions and settings -->
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    
+    <!-- SonarQube Configuration -->
+    <SonarQubeExclude>false</SonarQubeExclude>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <CodeAnalysisTreatWarningsAsErrors>false</CodeAnalysisTreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <!-- Release builds treat warnings as errors -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU' Or '$(Configuration)'=='Release'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CodeAnalysisTreatWarningsAsErrors>true</CodeAnalysisTreatWarningsAsErrors>
+    <RunAnalyzers>true</RunAnalyzers>
+  </PropertyGroup>
+  
+  <!-- Apply ruleset if present -->
+  <PropertyGroup Condition="Exists('$(MSBuildThisFileDirectory).sonarqube\SonarQube.ruleset')">
+    <CodeAnalysisRuleSet>$(MSBuildThisFileDirectory).sonarqube\SonarQube.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Roslynator.Analyzers" Version="4.*" PrivateAssets="all" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.556" PrivateAssets="all" />
+  </ItemGroup>
+
+  <!-- Exclude bin and obj folders from SonarQube analysis -->
+  <ItemGroup>
+    <SonarQubeSetting Include="sonar.exclusions">
+      <Value>**/bin/**,**/obj/**</Value>
+    </SonarQubeSetting>
+  </ItemGroup>
+</Project>
